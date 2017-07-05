@@ -66,6 +66,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(itemintent);
 
     }
-
+    public void tellJokeGCE(View view)
+    {
+        String str= new EndpointsAsyncTask().execute(new Pair<Context, String>(this, "Manfred")).toString();
+        Toast.makeText(this,str, Toast.LENGTH_SHORT).show();
+    }
 
 }

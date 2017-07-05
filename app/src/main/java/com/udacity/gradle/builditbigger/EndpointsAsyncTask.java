@@ -41,11 +41,11 @@ public class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, S
             myApiService = builder.build();
         }
 
-        context = params[0].first;
-        String name = params[0].second;
+       // context = params[0].first;
+
 
         try {
-            return myApiService.sayHi(name).execute().getData();
+            return myApiService.sayHi().execute().getData();
         } catch (IOException e) {
             return e.getMessage();
         }
@@ -53,6 +53,6 @@ public class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, S
 
     @Override
     protected void onPostExecute(String result) {
-        Toast.makeText(context, result, Toast.LENGTH_LONG).show();
+       // Toast.makeText(context, result, Toast.LENGTH_LONG).show();
     }
 }

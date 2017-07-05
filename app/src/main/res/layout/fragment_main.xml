@@ -23,6 +23,15 @@
         android:text="@string/button_text"
 
         />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/instructions_text_view"
+        android:onClick="tellJokeGCE"
+        android:text="tellJokeGCE"
+        android:layout_marginLeft="140dp"
+
+        />
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
